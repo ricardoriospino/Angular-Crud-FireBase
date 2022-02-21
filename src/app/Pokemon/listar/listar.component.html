@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+          <h3>Pokemones</h3>
+      </div>
+      <div class="card-body">
+          <table class="table table-hover">
+              <thead>
+                  <tr class="text-center">
+                      <th>Id</th>
+                      <th>Nombre</th>
+                      <th>Tipo</th>
+                      <th>Acciones</th>
+                  </tr> 
+              </thead>
+              <tbody>
+                  <tr *ngFor="let objPoke of lstPokemones "  class="text-center">
+                      <td>{{objPoke.id}}</td>
+                      <td>{{objPoke.nombre}}</td>
+                      <td>{{objPoke.tipo}}</td>
+                      <td>
+                          <button class="btn btn-warning"(click)="cargarPokemon(objPoke)">Editar</button>
+                          <button class="btn btn-danger" (click)="eliminarPokemon(objPoke)"
+                           style="margin-left: 10px;">Eliminar</button>
+                      </td>
+                  </tr>
+              </tbody>
+
+          </table>
+      </div>
+
+  </div>
+</div>
